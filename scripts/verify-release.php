@@ -65,7 +65,8 @@ if (($corePackages[0]['dist']['type'] ?? null) === 'path' || str_starts_with($co
 }
 
 $tag = getenv('GITHUB_REF_NAME');
-if ($tag !== false && $tag !== '' && $tag !== "v{$version}") {
+$refType = getenv('GITHUB_REF_TYPE');
+if ($refType === 'tag' && $tag !== false && $tag !== '' && $tag !== "v{$version}") {
     throw new RuntimeException("Git tag {$tag} does not match plugin version v{$version}.");
 }
 
