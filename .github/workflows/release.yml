@@ -73,7 +73,8 @@ jobs:
           composer package
           composer release:check
           unzip -q "build/mosaicora-${PLUGIN_VERSION}.zip" -d release-build
-          sha256sum "build/mosaicora-${PLUGIN_VERSION}.zip" > "build/mosaicora-${PLUGIN_VERSION}.zip.sha256"
+          cd build
+          sha256sum "mosaicora-${PLUGIN_VERSION}.zip" > "mosaicora-${PLUGIN_VERSION}.zip.sha256"
       - name: Run official WordPress Plugin Check
         uses: wordpress/plugin-check-action@v1
         with:
