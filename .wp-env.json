@@ -1,0 +1,14 @@
+{
+  "core": "WordPress/WordPress#7.0.2",
+  "phpVersion": "8.1",
+  "plugins": [
+    "."
+  ],
+  "mappings": {
+    "wp-content/mu-plugins/mosaicora-classic-test.php": "./tests/e2e/fixtures/mosaicora-classic-test.php"
+  },
+  "config": {
+    "WP_DEBUG": true,
+    "WP_DEBUG_DISPLAY": false
+  }
+}

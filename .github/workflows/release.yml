@@ -1,0 +1,75 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Verify and publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Resolve release version
+        run: echo "PLUGIN_VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_ENV"
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          coverage: none
+          extensions: zip
+      - name: Validate Composer metadata
+        run: composer validate --strict
+      - name: Install development dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+      - name: Audit dependencies
+        run: composer audit --locked --no-interaction
+      - name: Run PHP validation
+        run: |
+          composer test
+          composer lint
+          composer phpcs
+          composer release:check
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+      - name: Install browser dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Install Chromium
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Start WordPress
+        run: pnpm wp:start
+      - name: Run WordPress browser tests
+        run: pnpm test:e2e
+      - name: Stop WordPress
+        if: always()
+        run: pnpm wp:stop
+      - name: Install production dependencies
+        run: composer install --no-dev --classmap-authoritative --no-interaction --prefer-dist --no-progress
+      - name: Build and verify release archive
+        run: |
+          composer package
+          composer release:check
+          unzip -q "build/mosaicora-${PLUGIN_VERSION}.zip" -d release-build
+          sha256sum "build/mosaicora-${PLUGIN_VERSION}.zip" > "build/mosaicora-${PLUGIN_VERSION}.zip.sha256"
+      - name: Run official WordPress Plugin Check
+        uses: wordpress/plugin-check-action@v1
+        with:
+          build-dir: ./release-build/mosaicora
+          wp-version: "7.0"
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            build/mosaicora-${{ env.PLUGIN_VERSION }}.zip
+            build/mosaicora-${{ env.PLUGIN_VERSION }}.zip.sha256
