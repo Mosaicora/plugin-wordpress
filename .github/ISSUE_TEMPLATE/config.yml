@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/Mosaicora/plugin-wordpress/security/advisories/new
+    about: Send security reports privately through GitHub.
+  - name: Mosaicora support
+    url: https://mosaicora.io/contact
+    about: Contact Mosaicora for account or service help.

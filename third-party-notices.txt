@@ -1,0 +1,11 @@
+Third-party notices
+===================
+
+The release package contains `mosaicora/plugin-core-php`, the framework-neutral
+Mosaicora URL and JSON-LD helper library.
+
+- Source: https://github.com/Mosaicora/plugin-core-php
+- License: Apache License 2.0
+
+The dependency's complete human-readable source and license are included below
+`vendor/mosaicora/plugin-core-php` in every release ZIP.

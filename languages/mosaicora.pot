@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Mosaicora
+# This file is distributed under the same license as the Mosaicora package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mosaicora 1.0.0\n"
+"Report-Msgid-Bugs-To: support@mosaicora.io\n"
+"POT-Creation-Date: 2026-07-30 00:51+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: mosaicora.php:36
+msgid ""
+"Mosaicora could not start because its packaged dependencies are missing. "
+"Please reinstall the official plugin ZIP."
+msgstr ""
+
+#: src/Admin.php:25 src/Admin.php:26 src/Admin.php:64
+msgid "Mosaicora"
+msgstr ""
+
+#: src/Admin.php:43
+msgid "Connect Mosaicora"
+msgstr ""
+
+#: src/Admin.php:45
+msgid ""
+"Add the site ID from your Mosaicora dashboard. No API token is required."
+msgstr ""
+
+#: src/Admin.php:50
+msgid "Automatic social images"
+msgstr ""
+
+#: src/Admin.php:51
+msgid "Mosaicora site ID"
+msgstr ""
+
+#: src/Admin.php:52
+msgid "Image refresh"
+msgstr ""
+
+#: src/Admin.php:53
+msgid "Data cleanup"
+msgstr ""
+
+#: src/Admin.php:65
+msgid ""
+"Create polished, consistent social previews for every indexable page on your "
+"WordPress site."
+msgstr ""
+
+#: src/Admin.php:70
+msgid "Save Mosaicora settings"
+msgstr ""
+
+#: src/Admin.php:83
+msgid "Publish Mosaicora Open Graph and X image tags."
+msgstr ""
+
+#: src/Admin.php:96
+msgid "Find this ID on your site overview in the Mosaicora dashboard."
+msgstr ""
+
+#: src/Admin.php:104
+msgid "Monthly — recommended"
+msgstr ""
+
+#: src/Admin.php:105
+msgid "Weekly"
+msgstr ""
+
+#: src/Admin.php:106
+msgid "Stable URL"
+msgstr ""
+
+#: src/Admin.php:107
+msgid "Manual revision"
+msgstr ""
+
+#: src/Admin.php:118
+msgid "For example: spring-launch"
+msgstr ""
+
+#: src/Admin.php:120
+msgid ""
+"Changing an image URL helps social networks retrieve a newer image the next "
+"time they inspect the page. It cannot force an immediate re-scrape."
+msgstr ""
+
+#: src/Admin.php:130
+msgid ""
+"Remove Mosaicora settings and page overrides when the plugin is deleted."
+msgstr ""
+
+#: src/Admin.php:132
+msgid "Deactivation always keeps your settings."
+msgstr ""
+
+#: src/Admin.php:139
+msgid "Setup status"
+msgstr ""
+
+#: src/Admin.php:141
+msgid "Add your site ID and enable automatic social images to complete setup."
+msgstr ""
+
+#: src/Admin.php:153
+msgid "Mosaicora is ready to publish social image metadata."
+msgstr ""
+
+#: src/Admin.php:160
+msgid "Mosaicora homepage social image preview"
+msgstr ""
+
+#: src/Admin.php:162
+msgid ""
+"This preview loads from cdn.mosaicora.io and sends the public homepage URL "
+"as part of the image path."
+msgstr ""
+
+#: src/Admin.php:173
+msgid ""
+"Another SEO plugin appears to be active. To avoid duplicate Open Graph image "
+"tags, disable its social-image output while Mosaicora automatic social "
+"images are enabled."
+msgstr ""
+
+#: src/Admin.php:192
+msgid "Settings"
+msgstr ""
+
+#: src/MetaBox.php:29
+msgid "Mosaicora social image"
+msgstr ""
+
+#: src/MetaBox.php:51
+msgid "Do not publish Mosaicora metadata for this page."
+msgstr ""
+
+#: src/MetaBox.php:55
+msgid "Page revision"
+msgstr ""
+
+#: src/MetaBox.php:59
+msgid "Optional, for example: product-update-2"
+msgstr ""
+
+#: src/MetaBox.php:61
+msgid "Overrides the site-wide image refresh value for this page."
+msgstr ""
+
+#: src/MetaBox.php:63
+msgid "Template ID"
+msgstr ""
+
+#: src/MetaBox.php:67
+msgid "Optional Mosaicora template ID"
+msgstr ""
+
+#: src/MetaBox.php:69
+msgid "Use a saved Mosaicora template for this page."
+msgstr ""
+
+#: src/MetaBox.php:74
+msgid "Exact image values"
+msgstr ""
+
+#: src/MetaBox.php:75
+msgid ""
+"Add only values that Mosaicora should use exactly. Values you leave out "
+"continue to use automatic page content."
+msgstr ""
+
+#: src/MetaBox.php:81
+msgid "Add exact value"
+msgstr ""
+
+#: src/MetaBox.php:107
+msgid "Choose a value"
+msgstr ""
+
+#: src/MetaBox.php:108 src/MetaBox.php:203
+msgid "Remove"
+msgstr ""
+
+#: src/MetaBox.php:109 src/MetaBox.php:252
+msgid "Enter one item per line."
+msgstr ""
+
+#: src/MetaBox.php:110 src/MetaBox.php:254
+msgid "Enter one metric per line as: ID | Label | Value"
+msgstr ""
+
+#: src/MetaBox.php:111 src/MetaBox.php:239
+msgid "Yes"
+msgstr ""
+
+#: src/MetaBox.php:112 src/MetaBox.php:240
+msgid "No"
+msgstr ""
+
+#: src/Plugin.php:30
+msgid ""
+"Mosaicora must be activated separately on each site so every site can use "
+"its own Mosaicora site ID."
+msgstr ""
+
+#: src/Plugin.php:31
+msgid "Per-site activation required"
+msgstr ""
+
+#: src/Settings.php:38
+msgid ""
+"Mosaicora settings could not be saved. Please review the fields and try "
+"again."
+msgstr ""
+
+#: src/Settings.php:51
+msgid ""
+"Enter a valid Mosaicora site ID containing up to 36 letters, numbers, dots, "
+"underscores, or hyphens."
+msgstr ""
+
+#: src/Settings.php:70
+msgid "Add a manual revision before selecting manual image refresh."
+msgstr ""

@@ -1,0 +1,4 @@
+allowBuilds:
+  fs-ext-extra-prebuilt: true
+minimumReleaseAgeExclude:
+  - '@wordpress/env@11.12.0'
